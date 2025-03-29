@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'sign_up_page.dart'; // Import Sign Up Page
 
 class SignInPage extends StatelessWidget {
   @override
@@ -57,7 +58,11 @@ class SignInPage extends StatelessWidget {
             SizedBox(height: 15),
             TextButton(
               onPressed: () {
-                // TODO: Navigate to Sign Up Page
+                // Navigate to Sign Up Page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                );
               },
               child: Text("Don't have an account? Sign up"),
             ),
